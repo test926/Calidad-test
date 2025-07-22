@@ -15,20 +15,15 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
       - name: Instalar validadores
-        run: |
+        run: 
           npm install -g html-validator-cli css-validator
 
       - name: Validar HTML
-        run: |
+        run: 
           html-validator --file=Index.html --format=text --validator=https://validator.w3.org/nu/
 
       - name: Validar CSS
-        run: |
+        run: 
           css-validator -f styles.css
 
