@@ -1,0 +1,34 @@
+name: Validación de HTML y CSS
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  validate:
+    name: Validar HTML & CSS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Instalar validadores
+        run: |
+          npm install -g html-validator-cli css-validator
+
+      - name: Validar HTML
+        run: |
+          html-validator --file=Index.html --format=text --validator=https://validator.w3.org/nu/
+
+      - name: Validar CSS
+        run: |
+          css-validator -f styles.css
+
