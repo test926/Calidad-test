@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Ejecutar un script
-        run: echo "!Hola, GitHub |"
+        run: echo "!Hola, GitHub bienvenido"
 
