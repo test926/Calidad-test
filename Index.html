@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModaStyle - Tienda de Ropa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>ModaStyle</h1>
+        <p>Tu tienda de moda favorita</p>
+    </header>
+    
+    <div class="container">
+        <div class="productos">
+            <!-- Producto 1 -->
+            <div class="producto" data-id="1">
+                <div class="producto-imagen">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/05991278-0f74-43e1-a5d5-5fd85ffd95ba.png" alt="Camiseta básica blanca de algodón orgánico con cuello redondo">
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-titulo">Camiseta Básica Blanca</h3>
+                    <p class="producto-precio">$19.99</p>
+                    <p class="producto-desc">Camiseta de algodón 100% orgánico, cómoda y transpirable.</p>
+                    <button class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="producto" data-id="2">
+                <div class="producto-imagen">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/49d9bf27-d6f6-45b0-97c1-9b601e264d2a.png" alt="Jeans azul oscuro estilo slim fit con roturas en las rodillas">
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-titulo">Jeans Slim Fit</h3>
+                    <p class="producto-precio">$49.99</p>
+                    <p class="producto-desc">Jeans de mezclilla con corte slim y detalles desgastados.</p>
+                    <button class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="producto" data-id="3">
+                <div class="producto-imagen">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f146a6e8-fbaa-43b4-8340-754fdd846d0e.png" alt="Chaqueta denim azul claro estilo oversize con bolsillos delanteros">
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-titulo">Chaqueta Denim</h3>
+                    <p class="producto-precio">$59.99</p>
+                    <p class="producto-desc">Chaqueta de mezclilla clásica con diseño oversize.</p>
+                    <button class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="producto" data-id="4">
+                <div class="producto-imagen">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4758c6d7-413a-41e0-8150-399307c12e54.png" alt="Vestido negro midi con estampado floral y escote en V">
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-titulo">Vestido Floral</h3>
+                    <p class="producto-precio">$39.99</p>
+                    <p class="producto-desc">Vestido midi con diseño floral y corte elegante.</p>
+                    <button class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carrito">
+            <h2 class="carrito-titulo">Tu Carrito</h2>
+            <div class="carrito-items" id="carrito-items">
+                <!-- Items del carrito aparecerán aquí -->
+            </div>
+            <div class="carrito-total">
+                Total: $<span id="carrito-total">0.00</span>
+            </div>
+            <button class="btn btn-comprar">Finalizar Compra</button>
+        </div>
+    </div>
+    
+</body>
+</html>
+

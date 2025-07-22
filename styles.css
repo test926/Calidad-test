@@ -1,0 +1,245 @@
+/* ===========================
+   VARIABLES GLOBALES
+=========================== */
+:root {
+    --primary: #3a0ca3;
+    --secondary: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+/* ===========================
+   RESET Y ESTILOS BASE
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--dark);
+}
+
+/* ===========================
+   CABECERA (HEADER)
+=========================== */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   CONTENEDOR PRINCIPAL
+   GRID: PRODUCTOS + CARRITO
+=========================== */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+/* ===========================
+   SECCIÓN PRODUCTOS
+=========================== */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Tarjeta individual de producto */
+.producto {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para tarjeta */
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+/* Contenedor imagen producto */
+.producto-imagen {
+    height: 200px;
+    overflow: hidden;
+}
+
+/* Imagen producto, ajustada con object-fit */
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenedor de información del producto */
+.producto-info {
+    padding: 1rem;
+}
+
+/* Título producto */
+.producto-titulo {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+/* Precio producto */
+.producto-precio {
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Descripción producto */
+.producto-desc {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+
+/* Botón base */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Botón con color principal */
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2a087c;
+}
+
+/* Botón de comprar (color secundario) */
+.btn-comprar {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--secondary);
+    color: white;
+}
+
+.btn-comprar:hover {
+    background-color: #d91a6d;
+}
+
+/* ===========================
+   CARRITO DE COMPRAS
+=========================== */
+.carrito {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 2rem;
+}
+
+/* Título del carrito */
+.carrito-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    color: var(--dark);
+}
+
+/* Contenedor de items del carrito con scroll */
+.carrito-items {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+/* Item individual del carrito */
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.carrito-item:last-child {
+    border-bottom: none;
+}
+
+/* Información del item */
+.carrito-item-info h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+/* Precio del item */
+.carrito-item-precio {
+    font-size: 0.8rem;
+    color: var(--primary);
+}
+
+/* Controles de cantidad */
+.carrito-item-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Botones para modificar cantidad */
+.cantidad-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Total del carrito */
+.carrito-total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+/* 
+   RESPONSIVE
+*/
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Carrito arriba y no sticky en móvil */
+    .carrito {
+        position: static;
+        order: -1;
+        margin-bottom: 2rem;
+        top: auto;
+    }
+}
