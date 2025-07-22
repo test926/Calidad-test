@@ -25,5 +25,5 @@ jobs:
 
       - name: Validar CSS
         run: 
-          css-validator -f styles.css
+          css-validator styles.css
 
