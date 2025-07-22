@@ -1,0 +1,13 @@
+name: holamundo
+on: [push]
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ejecutar un script
+        run: echo "!Hola, GitHub |"
+
