@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 4, nombre: "Vestido Floral", precio: 39.99, imagen: "https://placehold.co/500x500" }
     ];
     
-    // Carrito inicialmente vacío
+  
     let carrito = [];
     
     // Elementos del DOM que se van a manipular

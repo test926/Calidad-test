@@ -1,6 +1,4 @@
-/* ===========================
-   VARIABLES GLOBALES
-=========================== */
+
 :root {
     --primary: #3a0ca3;
     --secondary: #f72585;
@@ -8,9 +6,9 @@
     --dark: #212529;
 }
 
-/* ===========================
+/*
    RESET Y ESTILOS BASE
-=========================== */
+*/
 * {
     margin: 0;
     padding: 0;
@@ -23,9 +21,9 @@ body {
     color: var(--dark);
 }
 
-/* ===========================
+/* 
    CABECERA (HEADER)
-=========================== */
+*/
 header {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
@@ -47,9 +45,9 @@ header {
     gap: 2rem;
 }
 
-/* ===========================
+/* 
    SECCIÓN PRODUCTOS
-=========================== */
+*/
 .productos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -109,9 +107,9 @@ header {
     margin-bottom: 1rem;
 }
 
-/* ===========================
+/*
    BOTONES
-=========================== */
+*/
 
 /* Botón base */
 .btn {
